@@ -1,0 +1,52 @@
+name: motiwalajewels
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  webview_flutter: ^4.10.0
+  file_picker: ^9.0.2
+  webview_flutter_android: ^4.3.3
+  connectivity_plus: ^6.1.3
+  provider: ^6.1.2
+  permission_handler: ^11.4.0
+  rflutter_alert: ^2.0.7
+  url_launcher: ^6.3.1
+  lottie: ^2.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.3
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/  # Ensure the folder exists and contains your logo
+
+  fonts:
+    - family: Futura
+      fonts:
+        - asset: assets/fonts/Futura Bold font.ttf
+          weight: 700
+        - asset: assets/fonts/futura light bt.ttf
+          weight: 300
+        - asset: assets/fonts/futura medium bt.ttf
+          weight: 500
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/revisedlogo.jpg"
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/images/revisedlogo.jpg"

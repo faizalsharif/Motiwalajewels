@@ -1,0 +1,34 @@
+import 'package:flutter/material.dart';
+import 'package:oroads_app/splash_ui.dart';
+import 'package:oroads_app/web_view.dart';
+
+class MainSplashScreen extends StatefulWidget {
+  const MainSplashScreen({super.key});
+
+  @override
+  State<MainSplashScreen> createState() => _MainSplashScreenState();
+}
+
+class _MainSplashScreenState extends State<MainSplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 2), _navigateToWebViewScreen);
+  }
+
+  void _navigateToWebViewScreen() {
+    if (mounted) {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const WebViewStack()),
+      );
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(children: [SplashScreen(onFinish: _navigateToWebViewScreen)]),
+    );
+  }
+}
